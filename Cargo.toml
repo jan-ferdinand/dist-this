@@ -3,5 +3,12 @@ name = "dist-this"
 version = "0.1.0"
 edition = "2021"
 
+repository = "https://github.com/jan-ferdinand/dist-this"
+
 [dependencies]
 tokio = { version = "1.41", features = ["rt", "tracing"] }
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
