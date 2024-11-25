@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    tokio::task::Builder::new();
 }
